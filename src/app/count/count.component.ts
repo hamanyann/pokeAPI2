@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { PokemonComponent } from '../pokemon/pokemon.component';
+import { PokemonStatusComponent } from '../pokemon-status/pokemon-status.component';
 
 @Component({
   selector: 'app-count',
   standalone: true,
-  imports: [PokemonComponent],
+  imports: [PokemonComponent,PokemonStatusComponent],
   templateUrl: './count.component.html',
 })
 export class CountComponent {

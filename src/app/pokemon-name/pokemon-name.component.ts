@@ -22,11 +22,11 @@ export class PokemonNameComponent {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['count']) {
-      this.getPokemonImg();
+      this.getPokemon();
     }
   }
 
-  async getPokemonImg() {
+  async getPokemon() {
     this.loading = true;
     const url = `https://pokeapi.co/api/v2/pokemon/${this.count}`;
     try {
