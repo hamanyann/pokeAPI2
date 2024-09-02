@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button
+      (click)="handleClick()"
+      class="text-2xl border-2 border-black p-1 w-30 mt-4 ml-4"
+    >
+      TOPへ
+    </button>
+
+    <div class="flex flex-col items-center">
+      <h1 class="text-3xl mt-4">カウントアプリ（Max 1025）</h1>
+      <div class="flex items-center"></div>
+      <app-pokemon [count]="count"></app-pokemon>
+      <h1 class="text-4xl m-8 mt-2">{{ count }}</h1>
+      <div class="flex flex-none">
+        <div class="flex flex-col items-start gap-2 mr-10">
+          <button
+            type="button"
+            class="text-2xl border-2 border-black p-2 w-20"
+            (click)="increment(1)"
+          >
+            +1
+          </button>
+          <button
+            class="text-2xl border-2 border-black p-2 w-20"
+            (click)="increment(10)"
+          >
+            +10
+          </button>
+          <button
+            class="text-2xl border-2 border-black p-2 w-20"
+            (click)="increment(100)"
+          >
+            +100
+          </button>
+        </div>
+        <div class="flex flex-col items-start gap-2">
+          <button
+            class="text-2xl border-2 border-red-500 p-2 w-20"
+            (click)="decrement(1)"
+          >
+            -1
+          </button>
+          <button
+            class="text-2xl border-2 border-red-500 p-2 w-20"
+            (click)="decrement(10)"
+          >
+            -10
+          </button>
+          <button
+            class="text-2xl border-2 border-red-500 p-2 w-20"
+            (click)="decrement(100)"
+          >
+            -100
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

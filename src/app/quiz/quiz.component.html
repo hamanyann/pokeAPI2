@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <button
+      (click)="handleClick()"
+      class="text-2xl border-2 border-black p-1 w-30 mt-4 ml-4"
+    >
+      TOPへ
+    </button>
+
+    <div class="flex flex-col items-center">
+        <p class="text-3xl mt-10">名前を呼んでゲットしよう！</p>
+        <app-pokemon [count]="answer"></app-pokemon>
+        <app-pokemon-name [count]="quiz1" (click)="answerClick(quiz1)"></app-pokemon-name>
+        <app-pokemon-name [count]="quiz2" (click)="answerClick(quiz2)"></app-pokemon-name>
+        <app-pokemon-name [count]="quiz3" (click)="answerClick(quiz3)"></app-pokemon-name>
+        <app-pokemon-name [count]="quiz4" (click)="answerClick(quiz4)"></app-pokemon-name>
+
+        <p class="text-3xl pt-10">{{ correct }}</p>
+        <button (click)="restQuiz()" class="text-2xl border-2 border-black p-1 w-30 mt-4 ml-4">
+          次のポケモンに進む
+        </button>
+      </div>
+</html>
